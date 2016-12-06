@@ -21,17 +21,6 @@ else{
 				</form>
 			</body>
 		</html>";
-	echo "<a href='index.php'>Home</a><br/><br/>";
-	//show file in directory
-	if ($handle = opendir('upload/')) {
-		echo "<h1>File nella Directory</h1>";
-    while (false !== ($entry = readdir($handle))) {
-        if ($entry != "." && $entry != "..") {
-			echo "<a href='upload/$entry'>$entry</a><br/>";
-        }
-    }
-
-    closedir($handle);
-}
+		echo "<a href='index.php'>Home</a><br/><br/>";
 }
 ?>

@@ -5,10 +5,11 @@ session_start();
 if(!isset($_SESSION['user'])){
 	if(isset($_POST['invia'])){
 		$username = $_POST['username'];
-		if($username == "Riccardo"){
+		if($username == "Riccardo" or $username == "Domenico" or $username == "Gianluca"){
 			$_SESSION['user']=$username;
 			echo "Benvenuto ".$_SESSION['user'].".<br/>";
-			echo "<a href='pagina_protetta.php'>Carica File</a>";
+			echo "<a href='pagina_protetta.php'>Carica File</a><br/>";
+			echo "<a href='esplora.php'>Esplora File</a>";
 		}
 		else {
 			echo "Username non valido, riprova. <br/>";
@@ -32,6 +33,7 @@ if(!isset($_SESSION['user'])){
 }
 else {
 	echo "Benvenuto ".$_SESSION['user'].".<br/>";
-	echo "<a href='pagina_protetta.php'>Carica File</a>";
+	echo "<a href='pagina_protetta.php'>Carica File</a><br/>";
+	echo "<a href='esplora.php'>Esplora File</a>";
 }
 ?>
