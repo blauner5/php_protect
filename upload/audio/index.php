@@ -15,7 +15,7 @@ else{
 					echo "";
 				}
 				else{
-					echo "Nome File: <a style='text-decoration:none;' href='pdf/$entry'><font style='color:red;'>$entry</font></a> - <a style='text-decoration:none;' href='pdf/$entry' download>Download $entry*</a><br/><br/>";
+					echo "Nome File: <a style='text-decoration:none;' href='../audio/$entry'><font style='color:red;'>$entry</font></a> - <a style='text-decoration:none;' href='../audio/$entry' download>Download $entry*</a><br/><br/>";
 				}
 			}
 		}
