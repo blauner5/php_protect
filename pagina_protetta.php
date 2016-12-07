@@ -15,6 +15,13 @@ else{
 			<body>
 				<form action='server.php' method='POST' enctype='multipart/form-data'>
 				<br/>
+				<p>Seleziona Cartella:
+				<select name='nome_cartella'>
+  			<option value='audio/'>Audio</option>
+  			<option value='immagini/'>Immagini</option>
+  			<option value='pdf/'>PDF</option>
+  			<option value='video/'>Video</option>
+				</select></p>
 				<input type='file' name='nome_file'/>
 				<br/>
 				<br/>

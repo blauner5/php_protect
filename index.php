@@ -7,7 +7,7 @@ if(!isset($_SESSION['user'])){
 		$username = $_POST['username'];
 		$password = $_POST['pass'];
 		if($username == "Riccardo" or $username == "Domenico" or $username == "Gianluca" or $username == "Celestino"){
-			if($password == "lollomar5" or $password == "domidomi" or $password == "giallugiallu" or $password == "celestino321"){
+			if($password == "pippo" or $password == "domidomi" or $password == "giallugiallu" or $password == "celestino321"){
 				$_SESSION['user']=$username;
 				echo "Benvenuto ".$_SESSION['user'].".<br/>";
 				$myfile = fopen("log/log.txt", "w") or die("Impossibile aprire il file.");

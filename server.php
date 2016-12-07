@@ -6,8 +6,8 @@ if(!isset($_SESSION['user'])){
 }
 else{
 	if(isset($_POST['submit'])){
-		$target_dir = "upload/";
-		$target_file = $target_dir . basename($_FILES["nome_file"]["name"]);
+		$target_dir = "upload/".$_POST['nome_cartella'];
+		$target_file = $target_dir . basename($_FILES['nome_file']['name']);
 		if (move_uploaded_file($_FILES['nome_file']['tmp_name'], $target_file)) {
     		echo "File valido, upload completato.<br/>";
 				echo "<a href='index.php'>Home</a>";
