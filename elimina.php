@@ -13,7 +13,7 @@ else {
 			echo "<a href='esplora.php'>Esplora File</a>";
 		}
 		else {
-			echo "File non trovato<br/>";
+			echo "<font style='color:red;'>File non trovato</font><br/>";
 			echo "<a href='esplora.php'>Esplora File</a>";
 		}
 	}

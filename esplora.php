@@ -15,12 +15,13 @@ else{
 					echo "";
 				}
 				else{
-					echo "Nome File: <a style='text-decoration:none;' href='upload/$entry'><font style='color:red;'>$entry</font></a><br/>";
+					echo "Nome File: <a style='text-decoration:none;' href='upload/$entry'><font style='color:red;'>$entry</font></a> - <button style='button'><a style='text-decoration:none;' href='upload/$entry' download>Download - $entry*</a></button><br/><br/>";
 				}
 			}
 		}
 	}
 	echo "<br/>";
+	echo "*Su <font style='color:red;'>FireFox</font> si potrebbero verificare problemi sul Download del file.<br/><br/>";
 	echo "<a href='index.php'>Home</a>";
 	echo "<h1>Elimina File</h1>";
 	echo "<form action='elimina.php' method='post'>
