@@ -14,6 +14,7 @@ else{
 			</head>
 			<body>
 				<form action='server.php' method='POST' enctype='multipart/form-data'>
+				<br/>
 				<input type='file' name='nome_file'/>
 				<br/>
 				<br/>
