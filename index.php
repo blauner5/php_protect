@@ -16,7 +16,7 @@ if(!isset($_SESSION['user'])){
 				$log = "E' loggato: ". $_SESSION['user'].". Alle ore: ".date("d/m/Y - H:i:s");
 				fwrite($myfile, $log);
 				fclose($myfile);
-				$conn = mysqli_connect("192.168.1.102", "root", "lollomar", "blauner");
+				$conn = mysqli_connect("host", "user", "password", "database");
 				if(!$conn){
 					echo "Errore di connessione al database.";
 					mysqli_close($conn);
