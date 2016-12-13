@@ -3,7 +3,6 @@ session_start();
 if(!isset($_SESSION['user'])){
 	echo "Pagina protetta, devi prima effettuare il login.<br/>";
 	echo "<a href='index.php'>Home</a>";
-	include "access/.htaccess";
 }
 else{
 	echo "<!DOCTYPE html>
