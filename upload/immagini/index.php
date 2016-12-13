@@ -15,13 +15,50 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
 </style>";
 if(!isset($_SESSION['user'])){
 	echo "Pagina protetta, devi prima effettuare il login.<br/>";
 	echo "<a href='../../index.php'>Home</a>";
 }
 else{
-	echo "Benvenuto ".$_SESSION['user'].".<br/>";
+  echo "<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<ul>
+  <li><a href='../../index.php'>Home</a></li>
+  <li><a href='../../carica.php'>Carica File</a></li>
+  <li><a href='../../esplora.php'>Esplora File</a></li>
+  <li><a href='../../logout.php'>Logout</a></li>
+  <li><a style='color:red; border:1px solid;' href='#'>Benvenuto: ".$_SESSION['user']."</a></li>
+</ul>
+</body>
+</html>";
 	$dh = "../immagini/";
 	echo "<h1>File nella Directory $dh</h1>";
 	if ($handle = opendir($dh)){
@@ -39,8 +76,8 @@ else{
 								</tr>
 								<tr>
 									<td>$entry</td>
-									<td><a style='text-decoration:none;' href='../immagini//$entry'><font style='color:red;'>$entry</font></a></td>
-									<td><a style='text-decoration:none;' href='../immagini//$entry' download>Download - $entry</a></td>
+									<td><a style='text-decoration:none;' href='../immagini/$entry'><font style='color:red;'>$entry</font></a></td>
+									<td><a style='text-decoration:none;' href='../immagini/$entry' download>Download - $entry</a></td>
 								</tr>
 								</table>";
 				}
@@ -50,9 +87,8 @@ else{
 	echo "<br/>";
 	echo "*Su <font style='color:red;'>FireFox</font> si potrebbero verificare problemi sul Download del file.<br/><br/>";
 	echo "<a href='../../esplora.php'>Indietro</a><br/>";
-	echo "<a href='../../index.php'>Home</a>";
 	echo "<h1>Elimina File</h1>";
-	echo "<form action='../../elimina.php' method='post'>
+	echo "<form action='elimina.php' method='post'>
 		<input type='text' name='nome_file'/>
 		<input type='submit' name='elimina' value='Elimina File'/>
 		</form>";

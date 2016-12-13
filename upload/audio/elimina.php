@@ -2,7 +2,7 @@
 session_start();
 if(!isset($_SESSION['user'])){
 	echo "Pagina protetta, devi prima effettuare il login.<br/>";
-	echo "<a href='index.php'>Home</a>";
+	echo "<a href='../../index.php'>Home</a>";
 }
 else {
 	if(isset($_POST['elimina'])){

@@ -7,14 +7,20 @@ if(!isset($_SESSION['user'])){
 else {
 	if(isset($_POST['elimina'])){
 		$nome_file = $_POST['nome_file'];
-		if(file_exists('upload/'.$nome_file)){
-			unlink('upload/'.$_POST['nome_file']);
-			echo "File eliminato<br/>";
-			echo "<a href='esplora.php'>Esplora File</a>";
+		if(file_exists('../video/'.$nome_file)){
+			if($nome_file == "elimina.php" or $nome_file == "index.php"){
+				echo "Impossibile eliminare il seguente file.<br/>";
+				echo "<a href='../../esplora.php'>Esplora File</a>";
+			}
+			else {
+				unlink('../video/'.$_POST['nome_file']);
+				echo "File eliminato<br/>";
+				echo "<a href='../../esplora.php'>Esplora File</a>";
+			}
 		}
 		else {
 			echo "<font style='color:red;'>File non trovato</font><br/>";
-			echo "<a href='esplora.php'>Esplora File</a>";
+			echo "<a href='../../esplora.php'>Esplora File</a>";
 		}
 	}
 }

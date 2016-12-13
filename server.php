@@ -13,7 +13,7 @@ else{
 				echo "<a href='index.php'>Home</a>";
 		}
 		else {
-    		echo "Possibile attacco tramite file upload.\n";
+    		echo "Impossibile caricare il file.\n";
 		}
 	}
 }
