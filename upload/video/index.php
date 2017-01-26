@@ -18,7 +18,7 @@ else{
 	  <li><a href='../../carica.php'>Carica File</a></li>
 	  <li><a href='../../esplora.php'>Esplora File</a></li>
 	  <li><a href='../../logout.php'>Logout</a></li>
-	  <li><a style='color:#B22222; border:1px solid;' href='#'>Benvenuto: ".$_SESSION['user']."</a></li>
+	  <li><a style='color:red; border:1px solid;' href='#'>Benvenuto: ".$_SESSION['user']."</a></li>
 	</ul>
 	</body>
 	</html>";
@@ -70,7 +70,7 @@ else{
 	  <li><a href='../../index.php'>Home</a></li>
 	  <li><a href='../../esplora.php'>Esplora File</a></li>
 	  <li><a href='../../logout.php'>Logout</a></li>
-	  <li><a style='color:#B22222; border:1px solid;' href='#'>Benvenuto: ".$_SESSION['user']."</a></li>
+	  <li><a style='color:red; border:1px solid;' href='#'>Benvenuto: ".$_SESSION['user']."</a></li>
 	</ul>
 	</body>
 	</html>";

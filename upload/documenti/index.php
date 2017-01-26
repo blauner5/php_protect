@@ -5,12 +5,12 @@ if(!isset($_SESSION['user'])){
 	echo "<a href='../../index.php'>Home</a>";
 }
 else{
-	if($_SESSION['privilegi']==1){
+	if($_SESSION['privilegi'] == 1){
 		echo "<!DOCTYPE html>
 	<html>
 	<head>
 	  <link rel='stylesheet' type='text/css' href='../../css/style.css'>
-	  <title>File - Audio</title>
+	  <title>File - Documenti</title>
 	</head>
 	<body>
 	<ul>
@@ -22,8 +22,8 @@ else{
 	</ul>
 	</body>
 	</html>";
-	  $dh = "../audio/";
-	  echo "<h1>File nella Directory $dh</h1>";
+		$dh = "../documenti/";
+		echo "<h1>File nella Directory $dh</h1>";
 		if ($handle = opendir($dh)){
 			while (false !== ($entry = readdir($handle))){
 				if ($entry != "." && $entry != ".."){
@@ -39,8 +39,8 @@ else{
 									</tr>
 									<tr>
 										<td>$entry</td>
-										<td><a style='text-decoration:none;' href='../audio/$entry'>$entry</a></td>
-										<td><a style='text-decoration:none;' href='../audio/$entry' download>Download - $entry</a></td>
+										<td><a style='text-decoration:none;' href='../documenti/$entry'>$entry</a></td>
+										<td><a style='text-decoration:none;' href='../documenti/$entry' download>Download - $entry</a></td>
 									</tr>
 									</table>";
 					}
@@ -61,7 +61,7 @@ else{
 	<html>
 	<head>
 	  <link rel='stylesheet' type='text/css' href='../../css/style.css'>
-	  <title>File - Audio</title>
+	  <title>File - Documenti</title>
 	</head>
 	<body>
 	<ul>
@@ -72,8 +72,8 @@ else{
 	</ul>
 	</body>
 	</html>";
-	  $dh = "../audio/";
-	  echo "<h1>File nella Directory $dh</h1>";
+		$dh = "../documenti/";
+		echo "<h1>File nella Directory $dh</h1>";
 		if ($handle = opendir($dh)){
 			while (false !== ($entry = readdir($handle))){
 				if ($entry != "." && $entry != ".."){
@@ -89,8 +89,8 @@ else{
 									</tr>
 									<tr>
 										<td>$entry</td>
-										<td><a style='text-decoration:none;' href='../audio/$entry'>$entry</a></td>
-										<td><a style='text-decoration:none;' href='../audio/$entry' download>Download - $entry</a></td>
+										<td><a style='text-decoration:none;' href='../documenti/$entry'>$entry</a></td>
+										<td><a style='text-decoration:none;' href='../documenti/$entry' download>Download - $entry</a></td>
 									</tr>
 									</table>";
 					}

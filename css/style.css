@@ -54,11 +54,12 @@ li a:hover {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color:#808080 ;
+  background-image: url(../../img/background.jpg);
+  background-repeat: repeat;
 }
 
 a{
-  color:#B22222;
+  color:red;
 }
 
 .login {

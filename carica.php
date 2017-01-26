@@ -18,7 +18,7 @@ else{
 	  <li><a href='carica.php'>Carica File</a></li>
 	  <li><a href='esplora.php'>Esplora File</a></li>
 	  <li><a href='logout.php'>Logout</a></li>
-		<li><a style='color:#B22222; border:1px solid;' href='#'>Benvenuto: ".$_SESSION['user']."</a></li>
+		<li><a style='color:red; border:1px solid;' href='#'>Benvenuto: ".$_SESSION['user']."</a></li>
 	</ul>
 	<div class='carica'>
 	<form action='server.php' method='POST' enctype='multipart/form-data'>
